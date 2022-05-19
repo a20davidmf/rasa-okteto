@@ -1,0 +1,37 @@
+version: '3'
+services:
+  rasa:
+    container_name: rasa-server
+    image: rasa/rasa:2.8.1-full
+    user: "1000"
+    public: true
+    ports:
+      - 5006:5005
+    volumes:
+      - ./:/app
+    command:
+      - run
+      - --cors
+      - "*"
+      - --enable-api
+#      - --log-file
+#      - out.log
+    depends_on:
+      - action-server
+    networks:
+      - all
+  action-server:
+    container_name: rasa-action-server
+    image: rasa/rasa-sdk:2.8.5
+    volumes:
+      - ./actions:/app/actions
+    ports:
+      - "5055:5055"
+    networks:
+      - all
+
+networks:
+  all:
+    driver: bridge
+    driver_opts:
+      com.docker.network.enable_ipv6: "true"
