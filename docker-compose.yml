@@ -5,7 +5,7 @@ services:
     image: rasa/rasa:2.8.1-full
     user: "1000"
     ports:
-      - '5006:5005'
+      - "5006:5005"
     volumes:
       - ./:/app
     command:
@@ -17,7 +17,7 @@ services:
 #      - out.log
     depends_on:
       - action-server
-    public: true
+    public: "true"
     networks:
       - all
   action-server:
