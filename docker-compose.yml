@@ -14,6 +14,7 @@ services:
       - "*"
       - --enable-api
       - -p 5006
+      - --debug
 #      - --log-file
 #      - out.log
     depends_on:
