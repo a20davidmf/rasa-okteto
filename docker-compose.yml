@@ -1,7 +1,6 @@
 version: '3'
 services:
-  rasa:
-    container_name: rasa
+  rasa-server:
     image: rasa/rasa:2.8.1-full
     user: "1000"
     public: true
@@ -21,7 +20,6 @@ services:
     networks:
       - all
   action-server:
-    container_name: rasa-action-server
     image: rasa/rasa-sdk:2.8.5
     volumes:
       - ./actions:/app/actions
