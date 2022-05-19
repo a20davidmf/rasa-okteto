@@ -5,7 +5,7 @@ services:
     image: rasa/rasa:2.8.1-full
     user: "1000"
     ports:
-      - 5006:5005
+      - '5006:5005'
     volumes:
       - ./:/app
     command:
