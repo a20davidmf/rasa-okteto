@@ -4,6 +4,7 @@ services:
     container_name: rasa-server
     image: rasa/rasa:2.8.1-full
     user: "1000"
+    public: true
     ports:
       - '5006:5005'
     volumes:
