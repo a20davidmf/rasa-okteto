@@ -17,7 +17,7 @@ services:
 #      - out.log
     depends_on:
       - action-server
-    public: "true"
+    public: True
     networks:
       - all
   action-server:
