@@ -11,3 +11,8 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: init hello action
+  steps:
+    - intent: set_action
+    - action: action_hello_world
