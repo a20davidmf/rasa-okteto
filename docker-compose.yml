@@ -14,7 +14,7 @@ services:
       - "*"
       - --enable-api
       - -p 5006
-      - -m 20220520-163754.tar.gz
+      - -m models/20220520-163754.tar.gz
 #      - --log-file
 #      - out.log
     depends_on:
