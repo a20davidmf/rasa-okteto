@@ -15,6 +15,7 @@ services:
       - --enable-api
       - -p 5006
       - --debug
+      - -m 20220520-163754.tar.gz
 #      - --log-file
 #      - out.log
     depends_on:
