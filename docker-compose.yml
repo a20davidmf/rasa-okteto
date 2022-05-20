@@ -4,6 +4,7 @@ services:
     image: rasa/rasa:2.8.1-full
     user: "1000"
     public: true
+    restart: always
     ports:
       - '5006:5006'
     volumes:
@@ -23,6 +24,7 @@ services:
       - all
   action-server:
     image: rasa/rasa-sdk:2.8.5
+    restart: always
     volumes:
       - ./actions:/app/actions
     ports:
